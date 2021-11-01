@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_card_img_hieght">160dp</dimen>
+    <dimen name="marginr_10">10dp</dimen>
+    <dimen name="marginr_4">4dp</dimen>
+    <dimen name="marginr_8">8dp</dimen>
+    <dimen name="marginr_17sp">17sp</dimen>
+    <dimen name="marginr_18sp">18sp</dimen>
+    <dimen name="marginr_24sp">24sp</dimen>
+    <dimen name="marginr_30">30dp</dimen>
+    <dimen name="marginr_40">40dp</dimen>
+    <dimen name="marginr_15">15dp</dimen>
+
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="jokesDetailViewModel"
+            type="com.android.lillydoocodetest.presentation.jokes.JokesDetailViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/marginr_10"
+        app:cardCornerRadius="@dimen/marginr_8"
+        app:cardElevation="@dimen/marginr_4"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/marginr_40">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:inputType="text"
+                android:text="@{`Id : `+jokesDetailViewModel.selectedJokesData.id}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_4"
+                android:text="@{`Type : `+jokesDetailViewModel.selectedJokesData.type}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_id"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_id" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_4"
+                android:text="@{`Category : `+jokesDetailViewModel.selectedJokesData.category}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_category"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_category" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_setup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_4"
+                android:text="@{`Setup : `+jokesDetailViewModel.selectedJokesData.setup}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_type"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_type" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_joke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_4"
+                android:text="@{`Joke : `+jokesDetailViewModel.selectedJokesData.joke}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_setup"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_setup" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jokes_punchline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_4"
+                android:text="@{`Punchline : `+jokesDetailViewModel.selectedJokesData.delivery}"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_17sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_joke"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_joke" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/marginr_30"
+                android:layout_marginTop="@dimen/marginr_15"
+                android:layout_marginEnd="@dimen/marginr_30"
+                android:text="@string/ok"
+                android:textColor="@color/primaryDarkNight_90"
+                android:textSize="@dimen/marginr_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_jokes_punchline"
+                app:layout_constraintTop_toBottomOf="@id/tv_jokes_punchline" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

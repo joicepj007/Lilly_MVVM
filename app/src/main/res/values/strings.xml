@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LillydooCodeTest</string>
+    <string name="no_network_connection">No Network Connection</string>
+    <string name="app_opened">App Already Opened : </string>
+    <string name="str_jokes">Jokes</string>
+    <string name="jokes">JOKES</string>
+    <string name="category">Category :</string>
+    <string name="type">Type :</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>
